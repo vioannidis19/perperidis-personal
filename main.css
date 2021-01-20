@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,15 +19,16 @@ body {
 .nav-bar ul {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
     padding: 0;
 }
 
-.nav-bar .list-item {
+.nav-bar .list-item, .mobile-nav .mobile-list-item {
     list-style-type: none;
     margin: 0 10px;
 }
 
-.nav-bar .list-item a {
+.nav-bar .list-item a, .mobile-nav .mobile-list-item a{
     text-decoration: none;
     color: #999999;
 }
@@ -32,8 +37,12 @@ body {
     display: none;
 }
 
+.mobile-nav {
+    display: none;
+}
+
 .landing {
-    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("https://www.tovima.gr/wp-content/uploads/2020/07/13/koro.jpg");
+    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("https://www.auth.gr/sites/default/files/styles/nivo_slider_image/public/banner/dsc_0898_1-cropped.jpg?itok=9Foo9Xwf");
     background-size: cover;
     background-position: center;
     margin-top: 55px;
@@ -61,6 +70,93 @@ body {
     font-size: 1.5em;
 }
 
+.biography {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section .title {
+    text-align: center;
+    color: #333;
+    text-decoration: underline;
+}
+
+.biography .columns-container {
+    margin: 50px 0;
+    display: flex;
+}
+
+.biography .columns-container .column {
+    width: 50%;
+}
+
+.biography .columns-container .column:first-child {
+    text-align: center;
+}
+
+.biography .columns-container .column img {
+    border-radius: 50%;
+}
+
+.biography .columns-container .column:last-child {
+    margin-top: 60px;
+    color: #333;
+}
+
+.biography .columns-container h3,
+.biography .columns-container h4 {
+    margin: 5px 0;
+}
+
+.biography .study-info {
+    text-align: center;
+    color: #333;
+}
+
+.biography .study-info .subtitle {
+    margin: 40px 0;
+}
+
+.biography .study-info ul li {
+    list-style-type: none;
+    color: #333;
+}
+
+.biography .study-info .list-container {
+    margin: 20px 0;
+    display: flex;
+}
+
+.biography .study-info .list-container img {
+    margin-top: 60px;
+    width: 200px;
+    height: 50px;
+}
+
+.biography .study-info .list-container p {
+    margin: 0;
+}
+
+.biography .study-info .list-container div {
+    margin-left: 20px;
+    width: 80%;
+}
+
+.contact {
+    width: 80%;
+    margin: 40px auto;
+    color: #333;
+}
+
+.contact a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
 
 /****** RESPONSIVE ******/
 
@@ -82,4 +178,62 @@ body {
         font-size: 1.5em;
         cursor: pointer;
     }
+
+    .mobile-nav {
+        position: fixed;
+        top: 57px;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .mobile-nav ul {
+        padding: 0;
+    }
+
+    .mobile-nav ul .mobile-list-item {
+        margin: 20px 0;
+    }
+
+    .shown {
+        display: block;
+    }
+
+    .biography {
+        width: 95%;
+    }
+
+    .biography .columns-container {
+        display: block;
+    }
+
+    .biography .columns-container .column {
+        margin: 0 auto;
+    }
+
+    .biography .columns-container .column:last-child {
+        text-align: center;
+        width: 90%;
+    }
+
+    .biography .study-info {
+        
+    }
+
+    .biography .study-info ul {
+        padding: 0;
+    }
+
+    .biography .study-info .list-container {
+        display: block;
+        text-align: center;
+    }
+
+    .biography .study-info .list-container div {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    
 }
