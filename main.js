@@ -9,3 +9,10 @@ for(let i = 0; i < mobileListItem.length; i++) {
         document.querySelector('.mobile-nav').classList.toggle('shown');
     })
 }
+
+// let seeMore = document.querySelector('.see-more');
+// seeMore.addEventListener('click', () => {
+//     let studyInfo = document.querySelector('.study-info');
+//     studyInfo.classList.toggle('extended');
+//     seeMore.innerHTML = seeMore.innerHTML === "Δείτε Περισσότερα" ? "Δείτε Λιγότερα" : "Δείτε Περισσότερα";
+// })
